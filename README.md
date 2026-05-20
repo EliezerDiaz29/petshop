@@ -2,6 +2,8 @@
 
 Backend completo para um sistema de petshop com Node.js, Express, Sequelize, MySQL, Swagger, Axios e autenticacao JWT.
 
+O projeto tambem possui um frontend desenvolvido com React e Vite para consumo da API, gerenciamento visual do sistema e navegacao entre as funcionalidades do petshop.
+
 ## O que o projeto faz
 
 Esta API permite:
@@ -14,7 +16,22 @@ Esta API permite:
 - consultar CEP via integracao externa com Axios
 - acessar documentacao interativa via Swagger
 
-## Tecnologias utilizadas
+O frontend permite:
+
+- realizar login no sistema
+- navegar entre paginas utilizando React Router
+- visualizar dashboard do sistema
+- gerenciar donos dos pets
+- gerenciar pets cadastrados
+- consumir os endpoints da API
+- organizacao modular por paginas e servicos
+- interface SPA utilizando React + Vite
+
+---
+
+# Tecnologias utilizadas
+
+## Backend
 
 - Node.js
 - Express.js
@@ -26,12 +43,50 @@ Esta API permite:
 - JWT com `jsonwebtoken`
 - Hash de senha com `bcryptjs`
 
-## Estrutura do projeto
+## Frontend
+
+- React
+- Vite
+- React Router DOM
+- Axios
+- CSS modularizado
+- Context API
+
+---
+
+# Estrutura do projeto
 
 ```text
 .
 |-- database/
 |   `-- init.sql
+|
+|-- frontend/
+|   |-- public/
+|   |
+|   |-- src/
+|   |   |-- assets/
+|   |   |-- components/
+|   |   |-- contexts/
+|   |   |-- layouts/
+|   |   |
+|   |   |-- pages/
+|   |   |   |-- Dashboard/
+|   |   |   |-- Login/
+|   |   |   |-- Owner/
+|   |   |   `-- Pets/
+|   |   |
+|   |   |-- routes/
+|   |   |-- services/
+|   |   |-- styles/
+|   |   |
+|   |   |-- App.jsx
+|   |   `-- main.jsx
+|   |
+|   |-- index.html
+|   |-- package.json
+|   `-- vite.config.js
+|
 |-- src/
 |   |-- config/
 |   |-- controllers/
@@ -48,6 +103,7 @@ Esta API permite:
 |   |-- services/
 |   |-- utils/
 |   `-- validators/
+|
 |-- .env.example
 |-- .sequelizerc
 |-- package.json
