@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: radial-gradient(circle at top, #141428 0%, #0b0b12 60%);
+}
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: linear-gradient(145deg, #161627, #1c1c33);
+    padding: 34px;
+    border-radius: 18px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+    color: #e5e7eb;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #2a2a3d;
+    background: #0f0f18;
+    color: #e5e7eb;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.message {
+    font-size: 14px;
+    color: #fca5a5;
+}

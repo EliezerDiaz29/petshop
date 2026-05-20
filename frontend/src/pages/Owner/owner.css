@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: #0f0f17;
+    color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #f5f3ff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ddd6fe;
+}
+
+p {
+    text-align: center;
+    color: #a1a1aa;
+}
+
+.card {
+    background: #1a1a27;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 14px 0;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #2e2e3a;
+    background: #11111a;
+    color: #e5e7eb;
+    outline: none;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    background: #7c3aed;
+    color: white;
+    margin: 5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #6d28d9;
+}
+
+button[type="button"] {
+    background: #2e2e3a;
+    color: #e5e7eb;
+}
+
+button[type="button"]:hover {
+    background: #3f3f55;
+}
+
+.search {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #2e2e3a;
+    background: #11111a;
+    color: #e5e7eb;
+    margin: 10px 0;
+}
+
+.table {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: #1a1a27;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.2s;
+    align-items: center;
+}
+
+.row:hover {
+    background: #252538;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.buttons button {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.message {
+    background: #2a1f3d;
+    color: #e9d5ff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background: #1a1a27;
+    padding: 20px;
+    border-radius: 14px;
+    min-width: 300px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
