@@ -64,6 +64,9 @@ export default function OwnersPage() {
             setMessage('Preencha todos os campos.');
             return;
         }
+        
+
+        // Deve contener el arroba
 
         if (!form.email.includes('@')) {
             setMessage('Informe um e-mail válido contendo "@".');
@@ -121,6 +124,8 @@ export default function OwnersPage() {
         }
     }
 
+    // Filtrar por nombre, documento, numero, email, adresss
+
     const filteredOwners = owners.filter((owner) => {
         const term = search.toLowerCase();
 
@@ -174,7 +179,8 @@ export default function OwnersPage() {
 
             <div className="card">
                 <h2>Lista de donos</h2>
-
+                
+    
                 <p>Total: {owners.length}</p>
 
                 <input

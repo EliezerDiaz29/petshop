@@ -100,8 +100,15 @@ export default function PetsPage() {
             return;
         }
 
+        // No puede menor a zero
+
         if (Number(form.weight) <= 0) {
             setMessage('O peso deve ser maior que zero.');
+            return;
+        }
+
+        if (Number(form.age) <= 0) {
+            setMessage('O ano deve ser maior a zero.');
             return;
         }
 
@@ -170,6 +177,9 @@ export default function PetsPage() {
         }
     }
 
+    // Filtrar 
+
+
     const filteredPets = pets.filter((pet) => {
         const term = search.toLowerCase();
 
@@ -178,7 +188,8 @@ export default function PetsPage() {
             pet.species?.toLowerCase().includes(term) ||
             pet.breed?.toLowerCase().includes(term) ||
             pet.owner?.name?.toLowerCase().includes(term) ||
-            pet.notes?.toLowerCase().includes(term)
+            pet.notes?.toLowerCase().includes(term)  
+         
         );
     });
 
@@ -243,8 +254,11 @@ export default function PetsPage() {
                         <th>Nome</th>
                         <th>Espécie</th>
                         <th>Raça</th>
+                        <th>Idade</th>
+                        <th>Peso</th>
                         <th>Porte</th>
                         <th>Dono</th>
+                        <th>Observações</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -255,8 +269,11 @@ export default function PetsPage() {
                             <td>{pet.name}</td>
                             <td>{pet.species}</td>
                             <td>{pet.breed}</td>
+                            <td>{pet.age}</td>
+                            <td>{pet.weight}</td>
                             <td>{getSizeText(pet.size)}</td>
                             <td>{pet.owner?.name || '-'}</td>
+                            <td>{pet.notes}</td>
                             <td>
                                 <button onClick={() => handleDetails(pet)}>Ver</button>
                                 <button onClick={() => handleEdit(pet)}>Editar</button>
@@ -276,8 +293,10 @@ export default function PetsPage() {
                         <p>{detailPet.owner?.name}</p>
                         <p>{detailPet.species}</p>
                         <p>{detailPet.breed}</p>
-                        <p>{getSizeText(detailPet.size)}</p>
                         <p>{detailPet.weight} kg</p>
+                        <p>{getSizeText(detailPet.size)}</p>
+                        <p>{detailPet.notes}</p>
+                     
 
                         <button onClick={() => setDetailPet(null)}>
                             Fechar
